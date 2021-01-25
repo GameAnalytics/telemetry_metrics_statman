@@ -1,2 +1,4 @@
-# telemetry_metrics_statman
-Telemetry.Metrics reporter for Statman
+# TelemetryMetricsStatman
+
+`Telemetry.Metrics` reporter for Statman.
+
