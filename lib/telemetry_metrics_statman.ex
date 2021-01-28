@@ -8,7 +8,7 @@ defmodule TelemetryMetricsStatman do
 
       import Telemetry.Metrics
 
-      MetricsApiWeb.Telemetry.StatmanReporter.start_link(
+      TelemetryMetricsStatman.start_link(
         metrics: [
           counter("phoenix.endpoint.count"),
           summary("phoenix.endpoint.duration"),
