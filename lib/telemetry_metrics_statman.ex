@@ -65,8 +65,10 @@ defmodule TelemetryMetricsStatman do
     report(metric, key, round(value))
   end
 
-  defp report(%Metrics.Counter{}, key, value),
-    do: :statman.incr(key, value)
+  defp report(%Metrics.Counter{}, key, _value),
+  # As per documentation of Telemetry.Metrics.counter,
+  # ignore measurement and always increment by one.
+    do: :statman.incr(key, 1)
 
   defp report(%Metrics.Sum{}, key, value),
     do: :statman_gauge.incr(key, value)
