@@ -80,7 +80,7 @@ defmodule TelemetryMetricsStatman do
     do: :statman_histogram.record_value(key, :statman_histogram.bin(value))
 
   defp report(%Metrics.Distribution{}, key, value),
-    do: :statman_histogram.record_value(key, :statman_histogram.bin(value))
+    do: :statman_histogram.record_value(key, value)
 
 
   defp metric_key(metric, [] = _tags, _metadata),
