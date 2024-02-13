@@ -1,10 +1,8 @@
 language: elixir
-# fossa is Ubuntu 20.04
-dist: fossa
-elixir: '1.10.3'
-otp_release: '22.3.4'
-before_install:
-  - git config --global 'url.git@github.com:GameAnalytics.insteadOf' 'https://github.com/GameAnalytics'
+# focal is Ubuntu 20.04
+dist: focal
+elixir: '1.16.1'
+otp_release: '26.1'
 script:
     - mix test
     - travis_wait mix dialyzer
