@@ -21,7 +21,7 @@ defmodule TelemetryMetricsStatman.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_metrics, "~> 0.6.2 or ~> 1.0"},
       {:statman, github: "GameAnalytics/statman", tag: "v0.13"},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
