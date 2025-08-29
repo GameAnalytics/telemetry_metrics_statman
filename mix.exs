@@ -23,7 +23,7 @@ defmodule TelemetryMetricsStatman.MixProject do
     [
       {:telemetry_metrics, "~> 0.6.2 or ~> 1.0"},
       {:statman, github: "GameAnalytics/statman", tag: "v0.13"},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       {:mock, "~> 0.3", only: :test},
     ]
