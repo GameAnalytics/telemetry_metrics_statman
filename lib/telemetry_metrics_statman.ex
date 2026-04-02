@@ -53,7 +53,8 @@ defmodule TelemetryMetricsStatman do
 
   def handle_event(_event, measurements, metadata, %{metrics: metrics}) do
     for metric <- metrics do
-      if value = keep?(metric, metadata) && find_measurement(metric, measurements) do
+      value = keep?(metric, metadata) && find_measurement(metric, measurements)
+      if value do
         key = metric_key(metric, metric.tags, metadata)
         report(metric, key, value)
       end
